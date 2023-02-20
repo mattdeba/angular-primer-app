@@ -1,12 +1,6 @@
-function myFunction(param: number | string) {
-  if (typeof(param) == "number" || typeof(param) == "string") {
-    if(typeof (param) == "number") {
-      let fixed = param.toFixed(2);
-      console.log("My result: " + fixed);
-    }
-  } else {
-    throw ("Expected a number or a string: " + param)
-  }
-}
-myFunction(1);
-myFunction("London");
+let place;
+console.log("Place value: " + place + " Type: " + typeof(place));
+place = "London";
+console.log("Place value: " + place + " Type: " + typeof(place));
+place = null;
+console.log("Place value: " + place + " Type: " + typeof(place));
