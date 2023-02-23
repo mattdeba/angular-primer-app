@@ -1,11 +1,4 @@
-function getUKCapital() : string {
-  return "London";
-}
-function writeCity(f: () => string)  {
-  console.log(`City: ${f()}`)
-}
-writeCity(getUKCapital);
-writeCity(() => "Paris");
-
-let myCity = "Rome";
-writeCity(() => myCity);
+let myArray = [] ;
+myArray[0] = 100 ;
+myArray[1] = "Adam" ;
+myArray[2] = true ;
