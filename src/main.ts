@@ -1,4 +1,5 @@
-import { Observable, Observer } from "rxjs";
+import { Observable, Observer, Subject } from "rxjs";
+
 function recieveEvents(observable: Observable<string>) {
   observable.subscribe({
     next: str => {
@@ -15,3 +16,7 @@ function sendEvents(observer: Observer<string>) {
   }
   observer.complete();
 }
+
+let subject = new Subject<string>();
+recieveEvents(subject);
+sendEvents(subject);
