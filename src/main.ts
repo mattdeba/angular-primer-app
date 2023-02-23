@@ -1,4 +1,4 @@
-import { Observable } from "rxjs";
+import { Observable, Observer } from "rxjs";
 function recieveEvents(observable: Observable<string>) {
   observable.subscribe({
     next: str => {
@@ -6,4 +6,12 @@ function recieveEvents(observable: Observable<string>) {
     },
     complete: () => console.log("Sequence ended")
   });
+}
+
+function sendEvents(observer: Observer<string>) {
+  let count = 5;
+  for (let i = 0; i < count; i++) {
+    observer.next(`${i + 1} of ${count}`);
+  }
+  observer.complete();
 }
