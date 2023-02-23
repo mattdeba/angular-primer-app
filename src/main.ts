@@ -5,3 +5,4 @@ function writeCity(f: () => string)  {
   console.log(`City: ${f()}`)
 }
 writeCity(getUKCapital);
+writeCity(() => "Paris");
