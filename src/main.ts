@@ -21,3 +21,9 @@ console.log(`Name: ${hat.name}, Price: ${hat.price}`);
 console.log(`Name: ${boots.name}, Price: ${boots.price}`);
 hat.printDetails();
 boots.printDetails();
+
+console.log(`Hat is a Product? ${hat instanceof Product}`);
+console.log(`Hat is a DiscountProduct? ${hat instanceof DiscountProduct}`);
+console.log(`Boots is a Product? ${boots instanceof Product}`);
+console.log(`Boots is a DiscountProduct? ${boots instanceof DiscountProduct}`);
+
