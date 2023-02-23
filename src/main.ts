@@ -1,6 +1,10 @@
-let myArray: (number | string | boolean)[] = [100, "Adam", true];
-let otherArray = [...myArray, 200, "Bob", false];
-let sum: number = otherArray
-  .filter(val => typeof(val) == "number")
-  .reduce((accumulator: number, currentValue) => accumulator+(currentValue as number)**2, 0)
-console.log(`Sum: ${sum}`);
+let hat = {
+  name: "Hat",
+  price: 100
+};
+let boots = {
+  name: "Boots",
+  price: 100
+}
+console.log(`Name: ${hat.name}, Price: ${hat.price}`);
+console.log(`Name: ${boots.name}, Price: ${boots.price}`);
