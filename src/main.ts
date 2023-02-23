@@ -1,5 +1,6 @@
-function writeValue(val : string = "valeur par défaut") {
-  console.log(`Valeur : ${val}`)
+function writeValue(val : string, ...extraInfo : string[]) {
+  console.log(`Value : ${val}, Extras : ${extraInfo}`)
 }
-writeValue("Londres") ;
-writeValue() ;
+writeValue("Londres", "Pluie", "Froid") ;
+writeValue("Paris", "Ensoleillé") ;
+writeValue("New York") ;
