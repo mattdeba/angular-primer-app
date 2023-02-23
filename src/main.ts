@@ -1,6 +1,5 @@
-function writeValue(val : string | null) {
-  console.log(`Value : ${val ?? "Fallback value"}`)
+function writeValue(val : string = "valeur par défaut") {
+  console.log(`Valeur : ${val}`)
 }
 writeValue("Londres") ;
-writeValue(null) ;
-
+writeValue() ;
