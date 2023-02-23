@@ -1,6 +1,8 @@
-function writeValue(val : string, ...extraInfo : string[]) {
-  console.log(`Value : ${val}, Extras : ${extraInfo}`)
+function composeString(val: string) : string {
+  return `Composed string: ${val}`;
 }
-writeValue("Londres", "Pluie", "Froid") ;
-writeValue("Paris", "Ensoleillé") ;
-writeValue("New York") ;
+function writeValue(val?: string) {
+  console.log(composeString(val ?? "Fallback value"));
+}
+writeValue("London");
+writeValue();
