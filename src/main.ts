@@ -10,10 +10,14 @@ class Product {
     }
   }
 }
-let hat = new Product("Hat", 100);
+class DiscountProduct extends Product {
+  constructor(name: string, price: number, private discount: number) {
+    super(name, price - discount);
+  }
+}
+let hat = new DiscountProduct("Hat", 100, 10);
 let boots = new Product("Boots", 100, "Snow Gear");
 console.log(`Name: ${hat.name}, Price: ${hat.price}`);
 console.log(`Name: ${boots.name}, Price: ${boots.price}`);
 hat.printDetails();
 boots.printDetails();
-
