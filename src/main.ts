@@ -1,8 +1,6 @@
-let count: number | undefined | null = 100;
-if (count != null && count != undefined) {
-  let result1: string = count.toFixed(2);
-  console.log(`Result 1: ${result1}`);
+function writeValue(val : string | null) {
+  console.log(`Value : ${val ?? "Fallback value"}`)
 }
-let result2: string | undefined = count?.toFixed(2);
-console.log(`Result 2: ${result2}`);
+writeValue("Londres") ;
+writeValue(null) ;
 
